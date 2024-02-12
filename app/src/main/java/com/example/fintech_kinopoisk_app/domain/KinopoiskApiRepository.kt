@@ -10,4 +10,5 @@ interface KinopoiskApiRepository {
     suspend fun getListMovieByKeyword(tokenAuth: String, keyword: String): GetListMovieResponse?
 
     suspend fun getMovieById(tokenAuth: String, id: Int): MovieResponse?
+
 }
