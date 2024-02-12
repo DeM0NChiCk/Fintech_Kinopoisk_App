@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/popularFragment">
+
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.example.fintech_kinopoisk_app.ui.screen.fragment.PopularFragment"
+        android:label="PopularFragment"
+        tools:layout="@layout/fragment_popular">
+        <action
+            android:id="@+id/action_popularFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_popularFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.fintech_kinopoisk_app.ui.screen.fragment.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.example.fintech_kinopoisk_app.ui.screen.fragment.InformationFragment"
+        android:label="InformationFragment"
+        tools:layout="@layout/fragment_informational"/>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.fintech_kinopoisk_app.ui.screen.fragment.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+    </fragment>
+</navigation>
